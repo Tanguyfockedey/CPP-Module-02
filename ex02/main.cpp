@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tafocked <tafocked@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/29 20:30:04 by tafocked          #+#    #+#             */
-/*   Updated: 2024/10/30 15:10:03 by tafocked         ###   ########.fr       */
+/*   Created: 2024/10/30 14:25:50 by tafocked          #+#    #+#             */
+/*   Updated: 2024/10/30 18:28:48 by tafocked         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "Fixed.hpp"
 
-#include <iostream>
-
-class Fixed
+int	main(void)
 {
-	private:
-		int	_RawBits;
-		static const int	_frac;
+	Fixed	a = 10;
+	Fixed	b = 5;
+	Fixed	c;
 
-	public:
-		Fixed();
-		Fixed(const Fixed &copy);
-		Fixed &operator=(const Fixed &copy);
-		~Fixed();
-
-		int		getRawBits(void) const;
-		void	setRawBits(int const raw);
-};
+	c = a / b;
+	std::cout << c << std::endl;
+	std::cout << --c << std::endl;
+	std::cout << c << std::endl;
+	return (0);
+}
