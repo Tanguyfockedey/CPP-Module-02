@@ -6,7 +6,7 @@
 /*   By: tafocked <tafocked@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 20:30:07 by tafocked          #+#    #+#             */
-/*   Updated: 2024/10/30 18:53:43 by tafocked         ###   ########.fr       */
+/*   Updated: 2024/11/05 17:53:46 by tafocked         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -152,30 +152,30 @@ int	Fixed::toInt(void) const
 	return (this->_RawBits >> this->_frac);
 }
 
-static Fixed	&min(Fixed &a, Fixed &b)
+Fixed	&Fixed::min(Fixed &a, Fixed &b)
 {
 	if (a <= b)
 		return (a);
 	return (b);
 }
 
-static const Fixed	&min(const Fixed &a, const Fixed &b)
+const Fixed	&Fixed::min(const Fixed &a, const Fixed &b)
 {
-	if (a.getRawBits() <= b.getRawBits())
+	if ((Fixed)a <= b)
 		return (a);
 	return (b);
 }
 
-static Fixed	&max(Fixed &a, Fixed &b)
+Fixed	&Fixed::max(Fixed &a, Fixed &b)
 {
 	if (a >= b)
 		return (a);
 	return (b);
 }
 
-static const Fixed	&max(const Fixed &a, const Fixed &b)
+const Fixed	&Fixed::max(const Fixed &a, const Fixed &b)
 {
-	if (a.getRawBits() >= b.getRawBits())
+	if ((Fixed)a >= b)
 		return (a);
 	return (b);
 }
@@ -184,4 +184,3 @@ std::ostream	&operator<<(std::ostream &os, const Fixed &fixed)
 {
 	return (os << fixed.toFloat());
 }
-
