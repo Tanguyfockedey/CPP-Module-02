@@ -6,7 +6,7 @@
 #    By: tafocked <tafocked@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/20 16:37:10 by tafocked          #+#    #+#              #
-#    Updated: 2024/10/30 14:27:13 by tafocked         ###   ########.fr        #
+#    Updated: 2024/11/07 14:04:12 by tafocked         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ FILES	= Fixed.cpp \
 			main.cpp \
 
 CC		= c++
-CFLAGS	= -Wall -Wextra -Werror -std=c++98 -g #-fsanitize=thread
+CFLAGS	= -Wall -Wextra -Werror -std=c++98 -pedantic -g #-fsanitize=thread
 LDLIBS	=
 
 FILES_DIR = ./
